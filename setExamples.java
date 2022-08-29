@@ -19,12 +19,13 @@ public class setExamples
        
        words.add("Apple");
        // the set will ignore this dup
-       words.add("Apple");
+       words.add("Apple"); //no errror
        words.add("Bat");
        words.add("Candy");
        words.add("Doug");
        words.add("Eat");
        words.add("Follow");
+       words.add("Whole");
        words.add("Gate");
        words.add("Hello");
        words.add("Icicle");
@@ -50,7 +51,7 @@ public class setExamples
        
        
        //print out HashSet will display in what seems like random order
-       for (String word :words)
+       for (String word :t)
        {
            System.out.println(word);
            

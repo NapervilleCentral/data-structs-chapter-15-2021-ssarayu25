@@ -1,3 +1,5 @@
+ 
+import java.util.ListIterator;
 import java.util.LinkedList;
 
 /**
@@ -11,8 +13,20 @@ public class ListUtil
    */
    public static void reverse(LinkedList<String> strings)
    {
-       
+      
+      LinkedList <String> backwards = new LinkedList<>();
+    
+      for(String s: strings)
+      
+      {
+          backwards.addFirst(s);
+          
+      }
+      strings.clear();
+      for (String s: backwards)
+      {
+            strings.addLast(s);
+      }
       
    }
-   
 }
