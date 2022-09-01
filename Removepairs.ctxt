@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Removepairs
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=a1
+comment2.target=void\ rotate(java.util.Queue)
+comment3.params=a1\ b1
+comment3.target=boolean\ check(java.util.Queue,\ java.util.Queue)
+comment4.params=a1\ b1
+comment4.target=void\ remove(java.util.Queue,\ java.util.Queue)
+numComments=5
