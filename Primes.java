@@ -19,7 +19,7 @@ public class Primes
       System.out.println("Compute primes up to which integer?");
       int n = in.nextInt();
       Set <Integer> nums = new TreeSet<>();
-      for (int i = 1; i <= n;i++)
+      for (int i = 1; i <= n; i++)
       {
           nums.add(i);
       }
@@ -27,7 +27,7 @@ public class Primes
       {
           for(int b = 1; b <= n; b++)
           {
-              if (b % a == 0)
+              if ((b != a) && (b % a == 0))
                   nums.remove(b);
           }
       }
