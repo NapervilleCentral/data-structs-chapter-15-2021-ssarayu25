@@ -38,6 +38,6 @@ public class Task implements Comparable<Task>
    @Override
    public int compareTo(Task otherTask)
    {
-       return this.priority - otherTask.priority;
+        return getPriority()-otherTask.getPriority();
    }
 }
