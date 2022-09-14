@@ -25,10 +25,10 @@ public class StringLengthMap
             Integer len = word.length();
 
             // Update the map here
-            String temp = word.get(len);
-            word.put(len, word
+            String temp = words.get(len);
+            temp += ", " + word;
+            words.put(len, temp);
             // Modify Worked Example 15.1
-            . . .
 
 
          }
