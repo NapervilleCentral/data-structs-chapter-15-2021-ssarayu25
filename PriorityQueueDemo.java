@@ -9,21 +9,22 @@ public class PriorityQueueDemo
    public static void main(String[] args)
    {
       //create PriorityQueue of WorkOrder
-      PriorityQueue<Integer> q = new PriorityQueue<>();
+      PriorityQueue<WorkOrder> q = new PriorityQueue<>();
       //add several WorkOrder
 
-      q.add(2);
-      q.add(4);
-      q.add(1);
-      q.add(3);
+      q.add(new WorkOrder(2, "Go to Riot Fest"));
+      q.add(new WorkOrder(1, "Bike Home"));
+      q.add(new WorkOrder(3, "Finish reccomendation"));
       
-      int first = q.remove();
-      int second = q.remove();
+      int test = q.peek().hashCode();
+      System.out.println(test);
+      //WorkOrder first = q.remove();
+      //WorkOrder second = q.remove();
 
       //display WorkOrder and you "finish"/remove from the list
-      while (q.size() > 0)
-      {
-
-      }
+      //while (q.size() > 0)
+      //{
+              
+      //}
    }
 }

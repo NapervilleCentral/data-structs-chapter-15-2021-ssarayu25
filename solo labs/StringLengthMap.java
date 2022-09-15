@@ -14,7 +14,7 @@ public class StringLengthMap
    {
       String filename = "test1.txt";
 
-      try (Scanner in = new Scanner(new File(filename)))
+      try (Scanner in = new Scanner(new File("test1.txt")))
       {
 
          // Create your map here
@@ -26,6 +26,15 @@ public class StringLengthMap
 
             // Update the map here
             String temp = words.get(len);
+            if (temp == null)
+            {
+                words.put(len, word);
+            }
+            else
+            {
+                temp += ", " + word;
+                words.put(len, temp);
+            }
             temp += ", " + word;
             words.put(len, temp);
             // Modify Worked Example 15.1
@@ -35,6 +44,10 @@ public class StringLengthMap
 
          // Print the strings, in increasing order of their length
          // Use this format: 1: i, a, i
+         for (int i = 0; i < 20; i++)
+         {
+             System.out.println(words.get(i));
+         }
       }
       catch (FileNotFoundException e)
       {
