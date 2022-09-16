@@ -3,7 +3,7 @@ public class CDCollectionTest
 {
   public static void main(String[] args)
   {
-	//make CDCollection
+    //make CDCollection
     CDCollectionLL db = new CDCollectionLL();
 
 
@@ -24,7 +24,8 @@ public class CDCollectionTest
     db.addCD(new CD("Nervous System","Julia Michaels", 6.99,7,1.5));
 
 
-	//displays the entire list of CD's "Artist"--"CD"--"Number of Tracks"
+    //displays the entire list of CD's "Artist"--"CD"--"Number of Tracks"
+    System.out.println(db);
 
 
 

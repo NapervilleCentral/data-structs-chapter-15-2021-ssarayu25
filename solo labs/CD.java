@@ -36,6 +36,19 @@ public class CD
          tracks = numTracks;
          rating = rate;
    }
+   public String getTitle() {return title;}
+   public String getArtist() {return artist;}
+   public double getCost() {return cost;}
+   public int getTracks() {return tracks;}
+   public double getRating() {return rating;}
+   
+   public int compareTo(CD other)
+   {
+       if (this.rating < other.rating) return -1;
+       if (this.rating > other.rating) return 1;
+       return 0;
+   }
+   
 
    //-----------------------------------------------------------------
    //  Returns a description of this CD.

@@ -25,18 +25,17 @@ public class StringLengthMap
             Integer len = word.length();
 
             // Update the map here
-            String temp = words.get(len);
-            if (temp == null)
+            if (!words.containsKey(len))
             {
                 words.put(len, word);
             }
             else
             {
+                String temp = words.get(len);
                 temp += ", " + word;
                 words.put(len, temp);
             }
-            temp += ", " + word;
-            words.put(len, temp);
+            
             // Modify Worked Example 15.1
 
 
@@ -46,7 +45,11 @@ public class StringLengthMap
          // Use this format: 1: i, a, i
          for (int i = 0; i < 20; i++)
          {
-             System.out.println(words.get(i));
+             String word = words.get(i);
+             if (word != null)
+             {
+                 System.out.println(words.get(i));
+                }
          }
       }
       catch (FileNotFoundException e)

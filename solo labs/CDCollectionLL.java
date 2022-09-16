@@ -5,31 +5,57 @@
 //********************************************************************
 
 import java.text.NumberFormat;
+import java.util.*;
 
 public class CDCollectionLL
 {
    //private collection;// make LL
    private int count;
    private double totalCost;
-
+   private ListIterator <CD> iter;
+   private LinkedList<CD> CDs;
    /**
    *  Creates an initially empty collection.
    */
    public CDCollectionLL ()
    {
-
+      CDs = new LinkedList();
+      iter = CDs.listIterator();
       count = 0;
       totalCost = 0.0;
    }
 
    /**
    *  Adds a CD to the collection, keeping list in order according to
-   	  rating.
+         rating.
    *  @param
    */
-   public void addCD (String title, String artist, double cost,
-                      int tracks)
+   public void addCD (CD album)
    {
+       
+       if (!iter.hasNext()) 
+       {
+           CDs.add(album);
+           iter = CDs.listIterator();
+        }
+       else
+       {
+           CD next = iter.next();
+           if (album.compareTo(next) == 1)
+           {
+               iter.previous();
+               iter.add(album);
+               iter = CDs.listIterator();
+           }
+           else
+           {
+                addCD (album);
+           }
+           
+       }
+       
+       
+       
    }
 
    /**
@@ -47,7 +73,11 @@ public class CDCollectionLL
 
       report += "\n\nCD List:\n\n";
 
-	  //loop thru collection and display all the CD
+      //loop thru collection and display all the CD
+      for (CD album: CDs)
+      {
+          report +=album + "\n";
+      }
 
          //report += //CDtoString() + "\n";
 
