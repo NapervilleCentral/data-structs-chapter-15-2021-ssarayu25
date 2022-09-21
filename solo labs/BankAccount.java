@@ -2,7 +2,7 @@
    A bank account has a balance that can be changed by 
    deposits and withdrawals.
 */
-public class BankAccount
+public class BankAccount 
 {  
    private int accountNumber;
    private double balance;
@@ -65,12 +65,12 @@ public class BankAccount
    {   
       return balance;
    }
-   
+  
    public int hashCode()
    {
        return getAccountNumber();
    }
-   public boolean equals(BankAccount other)
+   public boolean equals(Object other)
    {
        return (this.hashCode() == other.hashCode());
    }

@@ -48,6 +48,7 @@ public class StringLengthMap
              String word = words.get(i);
              if (word != null)
              {
+                 System.out.print(i + ": ");
                  System.out.println(words.get(i));
                 }
          }
