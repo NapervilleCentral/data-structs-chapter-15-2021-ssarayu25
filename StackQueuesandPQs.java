@@ -16,6 +16,9 @@ public static void main(String[] args)
     Stack<String> list = new Stack();
     //Queue<String> list = new LinkedList();
     
+    //this is a test
+    System.out.println("test");
+    
     list.push("Apple");
     list.push("Bat");
     list.push("Civilian");
