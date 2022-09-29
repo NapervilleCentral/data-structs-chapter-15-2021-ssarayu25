@@ -12,6 +12,7 @@ public class FloodFillTester
       System.out.println("Expected: 14  11   8   5   1   3  78  76  74  72");
       System.out.println(rows[4]);
       System.out.println("Expected: 16  13  10   7   4  63  65  67  69  71");
+      System.out.println(gr);
       gr = new Grid();
       gr.floodfill(0, 0);
       rows = gr.toString().split("\n");

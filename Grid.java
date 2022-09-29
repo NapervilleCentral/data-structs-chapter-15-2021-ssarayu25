@@ -13,7 +13,7 @@ public class Grid
    public void floodfill(int row, int column)
    {
      Pair current = new Pair(row, column);
-     count = 0;
+     count = 1;
      s = new Stack<>();
      boolean valid = true;
      valid = ((row >= 0) && (column >= 0) && (row < SIZE) && (column < SIZE));
@@ -25,10 +25,12 @@ public class Grid
             count++;
         }
       boolean control = true;
+      int area = SIZE *SIZE;
+      s = new Stack<>();
       
-     while (control)
+     while (count <= area)
       {
-          s = new Stack<>();
+          
           row = current.getRow();
           column = current.getColumn();
           //North
@@ -74,7 +76,8 @@ public class Grid
                 pixels [row][column] = count;
                 count++;
             }
-            
+          column++;
+          if (s.size() !=0) current = s.pop();
      }
      
 }
